@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 13.5 2.5% 6%;
+    --foreground: 220 20% 92%;
+    --card: 220 15% 10%;
+    --card-foreground: 220 20% 92%;
+    --popover: 220 15% 10%;
+    --popover-foreground: 220 20% 92%;
+    --primary: 142 70% 45%;
+    --primary-foreground: 0 0% 5%;
+    --secondary: 220 15% 15%;
+    --secondary-foreground: 220 15% 85%;
+    --muted: 220 15% 15%;
+    --muted-foreground: 215 15% 55%;
+    --accent: 142 70% 45%;
+    --accent-foreground: 0 0% 5%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 215 20% 16%;
+    --input: 215 20% 16%;
+    --ring: 142 70% 45%;
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Inter", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0b0d10;
+}
+::-webkit-scrollbar-thumb {
+  background: #232a34;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #22c55e;
+}
